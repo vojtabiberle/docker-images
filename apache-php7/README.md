@@ -15,4 +15,4 @@ virtualhost on port 443 is disabled
 Path of apache document root. Default is same as WEBAPP_DIR from [php7]{/vojtabiberle/docker-images/php7} container
 but when you want document root in subdirectory, is here really easy way to do it.
 
- All other variables are same as in [php7](/vojtabiberle/docker-images/php7) container.
+ All other variables are same as in [php7](https://github.com/vojtabiberle/docker-images/php7) container.

@@ -10,7 +10,7 @@ run:
 	docker run --rm -i -t  $(MAINTAINER_NS)/$(NAME) /sbin/my_init -- /sbin/setuser webapp /usr/bin/composer --help
 
 tag:
-	docker tag $(MAINTAINER_NS)/$(NAME)
+	docker tag $(MAINTAINER_NS)/$(NAME) $(MAINTAINER_NS)
 
 push:
 	docker push $(MAINTAINER_NS)/$(NAME)

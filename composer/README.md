@@ -10,4 +10,4 @@ Is here changed to /composer so you can mount your ~/.composer folder to /compos
 ### COMPOSER_ALLOW_SUPERUSER
 Is here set to true, so you can run composer as root withouth warning.
 
-All other variables are same as in [php7](/vojtabiberle/docker-images/php7) container.
+All other variables are same as in [php7](https://github.com/vojtabiberle/docker-images/php7) container.
