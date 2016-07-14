@@ -1,4 +1,4 @@
-# composer
+# composer-php7
 Container for running composer comands like this: `docker run --rm -i -t vojtabiberle/composer /sbin/my_init --skip-startup-files --quiet -- /sbin/setuser webapp /usr/bin/composer`
 This is not so much helpful, but with [maker](https://github.com/vojtabiberle/maker) it will make much more sense.
 In this container is removed xdebug and php-fpm.

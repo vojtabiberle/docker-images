@@ -1,5 +1,5 @@
 MAINTAINER_NS = vojtabiberle
-NAME = composer
+NAME = composer-php7
 
 files = Dockerfile root/etc/php/7.0/mods-available/essentials.ini root/etc/service/php-fpm/down
 

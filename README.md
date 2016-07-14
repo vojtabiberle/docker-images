@@ -20,7 +20,7 @@ This container runs apache2.4 with mpm-event and php7.0-fpm. So its faster than
 apache with mod\_php bud you can use .htaccess file. You can specify apache document\_root
 by environment variable.
 
-### composer
+### composer-php7
 This package contains installed composer and ins not necessary to use it.
 
 ## php5
