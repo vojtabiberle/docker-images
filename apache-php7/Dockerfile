@@ -21,7 +21,7 @@ RUN apt-add-repository multiverse && \
 ADD root /
 
 RUN gpasswd -a www-data $WEBAPP_GROUP && \
-    a2enmod actions fastcgi alias && \
+    a2enmod actions fastcgi alias rewrite && \
     a2enconf php7.0-fpm && \
     a2enmod proxy_fcgi && \
     #a2enconf php7.0-cgi && \
