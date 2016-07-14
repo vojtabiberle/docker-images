@@ -2,7 +2,7 @@
 # sure you lock down to a specific version, not to `latest`!
 # See https://github.com/phusion/baseimage-docker/blob/master/Changelog.md for
 # a list of version numbers.
-FROM vojtabiberle/php7
+FROM vojtabiberle/php5
 MAINTAINER Vojtěch Biberle <vojtech.biberle@gmail.com>
 
 ENV APACHE_RUN_USER $WEBAPP_USER
@@ -22,7 +22,7 @@ ADD root /
 
 RUN gpasswd -a www-data $WEBAPP_GROUP && \
     a2enmod actions fastcgi alias rewrite && \
-    a2enconf php7.0-fpm && \
+    a2enconf php5.6-fpm && \
     a2enmod proxy_fcgi && \
     a2dissite 000-default && \
     a2ensite localhost
