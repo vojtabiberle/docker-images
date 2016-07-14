@@ -23,6 +23,9 @@ by environment variable.
 ### composer
 This package contains installed composer and ins not necessary to use it.
 
+## php5
+Just like php7 image ...
+
 ### mariadb
 This package runs MariaDB. You can specify database data dir, user, password and
 database name. Container will create this user with full permitions on everything
