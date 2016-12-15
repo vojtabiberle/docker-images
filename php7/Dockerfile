@@ -42,7 +42,13 @@ RUN apt-get update && \
         php7.0-sybase \
         php7.0-xsl \
         php7.0-zip \
-        php-xdebug
+        php-xdebug \
+        php-pear \
+        libsodium-dev
+
+RUN apt-get install -y php7.0-dev
+RUN pecl install libsodium
+RUN apt-get purge -y php7.0-dev && apt-get autoremove -y
 
 ADD root /
 
@@ -55,6 +61,7 @@ ENV WEBAPP_UID 1000
 WORKDIR $WEBAPP_DIR
 VOLUME [$WEBAPP_DIR]
 RUN phpenmod essentials
+RUN phpenmod sodium
 RUN groupadd -g $WEBAPP_GID $WEBAPP_GROUP && \
     useradd -d /var/www/website -g $WEBAPP_GID -u $WEBAPP_UID $WEBAPP_USER && \
     chown $WEBAPP_USER:$WEBAPP_GROUP $WEBAPP_DIR && \
