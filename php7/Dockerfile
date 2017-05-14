@@ -63,7 +63,7 @@ VOLUME [$WEBAPP_DIR]
 RUN phpenmod essentials
 RUN phpenmod sodium
 RUN groupadd -g $WEBAPP_GID $WEBAPP_GROUP && \
-    useradd -d /var/www/website -g $WEBAPP_GID -u $WEBAPP_UID $WEBAPP_USER && \
+    useradd -d $WEBAPP_DIR -g $WEBAPP_GID -u $WEBAPP_UID $WEBAPP_USER && \
     chown $WEBAPP_USER:$WEBAPP_GROUP $WEBAPP_DIR && \
     chown $WEBAPP_USER:$WEBAPP_GROUP /run/php
 RUN sed -i "s/^;daemonize = yes/daemonize = no/g" /etc/php/7.0/fpm/php-fpm.conf
