@@ -42,6 +42,7 @@ RUN apt-get update && \
         php7.0-sybase \
         php7.0-xsl \
         php7.0-zip \
+        php-memcached \
         php-xdebug \
         php-pear \
         libsodium-dev
