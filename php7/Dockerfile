@@ -9,6 +9,10 @@ MAINTAINER Vojtěch Biberle <vojtech.biberle@gmail.com>
 CMD ["/sbin/my_init"]
 
 RUN apt-get update && \
+    apt-get install -y software-properties-common && \
+    LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php && \
+    apt-get update && \
+
     apt-get install -y \
         php7.0 \
         php7.0-cgi \
@@ -44,12 +48,12 @@ RUN apt-get update && \
         php7.0-zip \
         php-memcached \
         php-xdebug \
+        php-libsodium \
         php-pear \
-        libsodium-dev
+        git && \
+    apt-get purge -y php7.1-common
 
-RUN apt-get install -y php7.0-dev
-RUN pecl install libsodium
-RUN apt-get purge -y php7.0-dev && apt-get autoremove -y
+RUN update-alternatives --set php /usr/bin/php7.0
 
 ADD root /
 
