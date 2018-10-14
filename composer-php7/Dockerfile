@@ -15,7 +15,6 @@ RUN apt-get purge -y php-xdebug php7.0-fpm && \
 
 ADD root /
 RUN phpenmod essentials
-RUN phpenmod sodium
 
 ENV COMPOSER_HOME /composer 
 ENV COMPOSER_ALLOW_SUPERUSER=1

@@ -66,7 +66,6 @@ ENV WEBAPP_UID 1000
 WORKDIR $WEBAPP_DIR
 VOLUME [$WEBAPP_DIR]
 RUN phpenmod essentials
-RUN phpenmod sodium
 RUN groupadd -g $WEBAPP_GID $WEBAPP_GROUP && \
     useradd -d $WEBAPP_DIR -g $WEBAPP_GID -u $WEBAPP_UID $WEBAPP_USER && \
     chown $WEBAPP_USER:$WEBAPP_GROUP $WEBAPP_DIR && \

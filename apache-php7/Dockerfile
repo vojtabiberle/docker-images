@@ -28,7 +28,6 @@ RUN gpasswd -a www-data $WEBAPP_GROUP && \
     a2ensite localhost
 
 RUN phpenmod essentials
-RUN phpenmod sodium
 
 EXPOSE 80 443
 
